@@ -10,10 +10,7 @@ app.use(express.json());
 
 const DB_URL = process.env.MONGODB_URL;
 mongoose
-  .connect(DB_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(DB_URL)
   .then(() => {
     console.log("Mongo Database connected successfully");
   })
